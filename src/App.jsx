@@ -4,7 +4,7 @@ import Navbar from './components/NavbarSection/Navbar'
 import PostHero from './components/PostHeroSection/PostHero'
 import WhyVerd from './components/WhyVerdSection/WhyVerd'
 import Features from './components/Features/Features'
-import Faq from './components/FAQ/faq'
+import Faq from './components/FAQ/Faq'
 import Footer from './components/Footer/Footer'
 
 function App() {
