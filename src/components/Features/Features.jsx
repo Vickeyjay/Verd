@@ -26,7 +26,7 @@ const Features = () => {
                     </div>
                     <div className="features-text">
                         <div className="card-main-txt">
-                        <span>Save in stable assets</span>
+                        <span>Save In Stable Assets</span>
                     </div>
                     <div className="card-sub-txt txt-one">
                         <span>Deposit in fiat or crypto, your funds are secured on-chain in USDC and USDT on Solana, designed for stable and consistent growth.</span>
@@ -41,7 +41,7 @@ const Features = () => {
                     </div>
                     <div className="features-text">
                         <div className="card-main-txt">
-                        <span>Built for everyone</span>
+                        <span>Built For everyone</span>
                     </div>
                     <div className="card-sub-txt txt-two">
                         <span>Designed to make on-chain saving simple and accessible, whether you're new to DeFi or already familiar with it.</span>
@@ -58,7 +58,7 @@ const Features = () => {
                     </div>
                     <div className="features-text">
                         <div className="card-main-txt">
-                        <span>Grow passively</span>
+                        <span>Grow Passively</span>
                     </div>
                     <div className="card-sub-txt txt-three">
                         <span>Your money is put to work through structured DeFi systems, so it grows in the background.</span>
@@ -73,7 +73,7 @@ const Features = () => {
                     </div>
                     <div className="features-text">
                         <div className="card-main-txt">
-                        <span>Access anytime</span>
+                        <span>Access Anytime</span>
                     </div>
                     <div className="card-sub-txt txt-four">
                         <span>Withdraw your funds whenever you want, in fiat or crypto.</span>

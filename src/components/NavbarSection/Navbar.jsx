@@ -21,7 +21,7 @@ const Navbar = () => {
                     <a href="#why-verd">Why Verd</a>
                     <a href="#features">Features</a>
                     <a href="#faqs">FAQs</a>
-                    <a href="#join" className="cta-btn">Join Waitlist</a>
+                    <a href="#home" className="cta-btn">Join Waitlist</a>
                 </div>
             </div>
         </div>

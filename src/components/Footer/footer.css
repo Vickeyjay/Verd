@@ -8,7 +8,7 @@
     padding: 72px 120px;
     gap: 73.5px;  
     position: relative;  
-    height: 874px;
+    height: 85vh;
     overflow: hidden; 
 }
 
@@ -31,6 +31,7 @@
 .footer-text-container .footer-main-text {
     font-size: 42px;
     font-weight: 500;
+  font-family: 'Questrial', sans-serif;
 }
 
 .footer-text-container .footer-sub-text {
@@ -59,6 +60,13 @@
     border-radius: 50.13px;
     font-size: 13.37px;
     padding: 10px;
+    font-family: 'Inter', sans-serif;
+    transition: background-color .3s ease-out;
+}
+
+.foot-cta-btn:hover {
+    background-color: #07170E !important;
+    color: #D6F284;
 }
 
 .footer-container .footer-contents {
@@ -104,9 +112,10 @@
 }
 
 .footer-logo-container a span {
-    font-size: 46px;
-    font-weight: 500;
+    font-size: 40px;
+    font-weight: 400;
     line-height: 24px;
+    font-family: 'Questrial', sans-serif;
 }
 
 .footer-contents .explore-container {
@@ -174,7 +183,7 @@
     height: 360.1443786621094px;
     width: 70%;
     position: absolute;
-    bottom: -37%;
+    bottom: -40%;
     transform: translate(-50%, -50%);
 }
 
@@ -183,20 +192,18 @@
     height: 100%;
 }
 
-.gradient {
-    width: 100%;
-    height: 550px;
-    background: radial-gradient( transparent 100%, #D6F284 0%, #040D08);
-    position: absolute;
-    border-radius: 40%;
-    bottom: -40%;
-}
-
 
 @media (max-width: 768px) {
 
     .footer-container {
-        gap: 150px;
+        padding-top: 35%;
+        gap: 77px;
+        justify-content: center;
+        height: 70vh;
+    }
+
+    .footer-container .footer-top-container {
+        margin-top: 0%;
     }
 
     .footer-text-container .footer-main-text {
@@ -210,7 +217,7 @@
 
     .footer-contents {
         flex-direction: column;
-        gap: 10px !important;
+        gap: 28px !important;
         justify-content: center;
         align-items: center;
     }
@@ -259,5 +266,24 @@
     .large-text > img{
         height: 157.04694366455078px;
         width: 100%;
+    }
+
+    .socials-main {
+        display: none;
+    }
+
+    .copyright-container {
+        display: flex;
+        place-content: center;
+        width: max-content !important;
+        margin-bottom: 0%;
+    }
+
+    .footer-container .large-text {
+        height: 360.1443786621094px;
+        width: 70%;
+        position: absolute;
+        top: 783px !important;
+        transform: translate(-50%, -50%);
     }
 }

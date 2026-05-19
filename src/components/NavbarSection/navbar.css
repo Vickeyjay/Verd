@@ -46,6 +46,7 @@
 
 .nav-container .nav-link-container {
     background-color: #FFFFFFB2;
+    color: #07170E;
     border: 0.3px solid #434343;
     padding: 11px 12px;
     border-radius: 30px;
@@ -63,6 +64,12 @@
     cursor: pointer;
     color: #07170E;
     text-decoration: none;
+    border-radius: 30px;
+    transition: background-color .3s ease-out;
+}
+
+.nav-link-container a:hover {
+    background-color: #F9F9F9;
 }
 
 .cta-btn {
@@ -71,6 +78,13 @@
     border-radius: 60px;
     border: none;
     font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    transition: background-color .3s ease-out;
+}
+
+.cta-btn:hover {
+    background-color: #07170E !important;
+    color: #D6F284;
 }
 
 
@@ -96,6 +110,7 @@
         background-color: #FFFFFFCC;
         border-radius: 50px 50px;
         padding: 30px 10px;
+        top: 1.8%;
         /* backdrop-filter: blur(20px); */
     }
 
