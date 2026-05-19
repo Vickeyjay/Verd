@@ -5,7 +5,7 @@ import PostHero from './components/PostHeroSection/PostHero'
 import WhyVerd from './components/WhyVerdSection/WhyVerd'
 import Features from './components/Features/Features'
 import Footer from './components/Footer/Footer'
-import Faq from './components/FAQ/Faq'
+import Faq from './components/FAQ/faq'
 
 function App() {
   return (
