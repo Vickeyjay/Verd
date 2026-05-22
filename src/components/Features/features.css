@@ -90,7 +90,7 @@
 
 .features-cards .card-img-one img{
    width: 337.90374265104555px !important;
-    animation: dance 5.5s ease-in-out infinite;
+    animation: dance 8.5s ease-in-out infinite;
 }
 
 .features-cards .card-img-three {
@@ -175,21 +175,21 @@
     }
 
     20% {
-        transform: rotate(-12deg);
+        transform: rotate(-8deg);
     }
 
     40% {
-        transform: rotate(12deg);
+        transform: rotate(8deg);
     }
 
     60% {
-        transform: rotate(-14deg);
+        transform: rotate(-10deg);
     }
 
     80% {
-        transform: rotate(14deg);
+        transform: rotate(10deg);
     }
-
+    
     100% {
         transform: rotate(0deg);
     }
@@ -222,7 +222,7 @@
 
 /* MObile Responsiveness */
 
-@media (max-width: 768px) {
+@media screen and (min-width: 300px) and (max-width: 977px) {
 
     .features-container {
         padding: 80px 0px;
@@ -326,4 +326,12 @@
     .features-text .txt-four {
         width: 218px !important;
     }
+}
+
+
+
+
+@media (min-width: 769px) and (max-width: 1500px) {
+    .features-container {
+    padding: 100px 30px;}
 }

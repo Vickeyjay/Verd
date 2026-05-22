@@ -31,6 +31,7 @@ const WhyVerd = () => {
                             </marker>
                         </defs>
                         <path
+                            className='path-1'
                            d="M 220 150 C 220 220, 120 320, 328 260"
                             fill="none"
                             stroke="#144027"
@@ -39,7 +40,8 @@ const WhyVerd = () => {
                             markerEnd="url(#arrowhead)"
                         />
                         <path
-                            d="M 500 340 C 570 180, 650 430, 660 170"
+                            className='path-2'
+                            d="M 500 240 C 470 180, 650 430, 660 170"
                             fill="none"
                             stroke="#144027"
                             strokeWidth="1.8"
