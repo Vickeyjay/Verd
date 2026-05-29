@@ -80,6 +80,41 @@
     font-family: 'Inter', sans-serif;
 }
 
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 260px;
+  max-width: 320px;
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  z-index: 9999;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+.toast.success {
+  background: #f0fdf4;
+  border: 0.5px solid #86efac;
+  color: #166534;
+}
+.toast.error {
+  background: #fef2f2;
+  border: 0.5px solid #fca5a5;
+  color: #991b1b;
+}
+
 
 /* ---- Mobile Responsiveness ----- */
 

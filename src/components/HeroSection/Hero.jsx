@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './hero.css';
 import logo from '../../assets/images/logo.png';
 
 const Hero = () => {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState(''); // 'loading' | 'success' | 'error'
+  const [toast, setToast] = useState({ show: false, type: '', msg: '' });
+
+  const showToast = (type, msg) => {
+    setToast({ show: true, type, msg });
+    setTimeout(() => setToast({ show: false, type: '', msg: '' }), 4000);
+  };
 
   const handleJoinWaitlist = async () => {
     if (!email) return;
-
-    setStatus('loading');
 
     try {
       const res = await fetch('http://localhost:3001/api/waitlist', {
@@ -19,14 +22,12 @@ const Hero = () => {
       });
 
       const result = await res.json();
-
       if (!res.ok) throw new Error(result.error);
 
-      setStatus('success');
       setEmail('');
+      showToast('success', "Congratulations!!! \n You're on the list! Check your inbox. 🎉");
     } catch (err) {
-      console.error(err);
-      setStatus('error');
+      showToast('error', 'Uh oh! \n Something went wrong. Try again.');
     }
   };
 
@@ -37,7 +38,6 @@ const Hero = () => {
           <div className="coming-soon">
             <img src={logo} alt="" /><span>Launching Soon</span>
           </div>
-
           <div className="hero-text">
             <div className="large-text">
               <span>Where Your Money Does More</span>
@@ -46,7 +46,6 @@ const Hero = () => {
               <span>A DeFi-powered system that helps your money grow and compound.</span>
             </div>
           </div>
-
           <div className="input-container">
             <input
               type="email"
@@ -55,29 +54,17 @@ const Hero = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
             <span>
-              <button
-                className="cta-btn"
-                onClick={handleJoinWaitlist}
-                disabled={status === 'loading'}
-              >
-                {status === 'loading' ? 'Sending...' : 'Get Early Access'}
+              <button className="cta-btn" onClick={handleJoinWaitlist}>
+                Get Early Access
               </button>
             </span>
           </div>
-
-          {/* Feedback messages */}
-          {status === 'success' && (
-            <p style={{ color: 'green', marginTop: '10px' }}>
-              🎉 You're on the list! Check your email.
-            </p>
-          )}
-          {status === 'error' && (
-            <p style={{ color: 'red', marginTop: '10px' }}>
-              Something went wrong. Try again.
-            </p>
-          )}
-
         </div>
+      </div>
+
+      {/* Toast Notification */}
+      <div className={`toast ${toast.type} ${toast.show ? 'show' : ''}`}>
+        {toast.msg}
       </div>
     </>
   );
