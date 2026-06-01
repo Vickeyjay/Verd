@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Hero from './components/HeroSection/Hero'
 import Navbar from './components/NavbarSection/Navbar'
 import PostHero from './components/PostHeroSection/PostHero'
@@ -8,9 +8,32 @@ import Footer from './components/Footer/Footer'
 import Faq from './components/FAQ/faq'
 
 function App() {
+  const [activeSection, setActiveSection] = useState('home')
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('[id]')
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
+        })
+      },
+      {
+        threshold: 0.5,
+      }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <>
-      <Navbar />
+      <Navbar activeSection={activeSection} />
       <Hero />
       <PostHero />
       <WhyVerd />

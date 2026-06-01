@@ -44,7 +44,7 @@
 }
 
 .nav-link-container a {
-    padding: 14px 12px;
+    padding: 12px 12px;
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
@@ -54,8 +54,10 @@
     transition: background-color .3s ease-out;
 }
 
-.nav-link-container a:hover {
-    background-color: #F9F9F9;
+.nav-link-container a:hover,
+.nav-link-container a.active {
+    background-color: #07170E;
+    color: #FFFFFFB2;
 }
 
 .cta-btn {
