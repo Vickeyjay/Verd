@@ -239,17 +239,7 @@
 
     .logo-text-container .footer-logo-container a > img{
         height: 34.211320877075195px;
-        width: 34.808624267578125px;
-    }
-
-    .footer-logo-container a > .copy {
-        left: 32%;
-    }
-
-    .footer-logo-container a span {
-        font-size: 37px;
-        font-weight: 500;
-        line-height: 24px;
+        width: 120px;
     }
 
     .logo-text-container .text-container {

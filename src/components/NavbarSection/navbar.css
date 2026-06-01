@@ -117,8 +117,8 @@
 
     .nav-container .nav-logo-container {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-self: left;
+        justify-content: left;
         width: 78.98565673828125px;
         height: 23.705209732055664px;
     }
