@@ -8,7 +8,7 @@ const Hero = () => {
 
   const showToast = (type, msg) => {
     setToast({ show: true, type, msg });
-    setTimeout(() => setToast({ show: false, type: '', msg: '' }), 5000);
+    setTimeout(() => setToast({ show: false, type: '', msg: '' }), 4000);
   };
 
   const handleJoinWaitlist = async () => {
@@ -25,9 +25,9 @@ const Hero = () => {
       if (!res.ok) throw new Error(result.error);
 
       setEmail('');
-      showToast('success', "Congratulations!!! \n You're on the list! Check your inbox. 🎉");
+      showToast('success', <><strong>Congratulations!!! 🎉</strong><br/>You're on the list! Check your inbox.</>);
     } catch (err) {
-      showToast('error', 'Uh oh! \n Something went wrong. Try again.');
+      showToast('error', <><strong>Uh oh!</strong><br/>Something went wrong. Try again.</>);
     }
   };
 

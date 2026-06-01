@@ -21,7 +21,7 @@ app.post('/api/waitlist', async (req, res) => {
   const { data, error } = await resend.emails.send({
     from: 'Marv from Verd <onboarding@resend.dev>',
     to: [email],
-    subject: "You're on the Verd waitlist! 🎉",
+    subject: "You're on the Verd waitlist!",
     html: `
     <div style="font-family: sans-serif; max-width: 500px; margin: 0 auto; padding: 40px 20px; background-color: #ffffff;">
       
@@ -30,7 +30,7 @@ app.post('/api/waitlist', async (req, res) => {
       
       <!-- Headline -->
       <h2 style="font-size: 22px; color: #111827; margin-bottom: 12px;">
-        You're on the list! 🚀
+        You're on the list!
       </h2>
       
       <!-- Body -->
@@ -41,7 +41,7 @@ app.post('/api/waitlist', async (req, res) => {
       </p>
 
       <p style="font-size: 16px; color: #6B7280; line-height: 1.6;">
-        We'll reach out as soon as we're ready to launch. Stay tuned. 👀
+        We'll reach out as soon as we're ready to launch. Stay tuned. 
       </p>
 
       <!-- CTA Button (optional) -->

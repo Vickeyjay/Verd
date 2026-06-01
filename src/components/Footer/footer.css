@@ -51,6 +51,12 @@
     padding: 7.25px;
     color: #144027;
     border: none;
+    outline: none;
+}
+
+.footer-input-container > input:focus {
+    border-bottom: 1px solid #D6F284;
+    background-color: transparent;
 }
 
 .footer-input-container .foot-cta-btn {
@@ -286,16 +292,4 @@
         transform: translate(-50%, -50%);
     }
 
-    /* .footer-input-container > input {
-        border: none;
-        height: 33px;
-        outline: none;
-        transition: border 0.5s ease;
-        background-color: red !important;
-    }
-
-    .footer-input-container > input:focus {
-        border-bottom: 1px solid #D6F284;
-        background-color: transparent;
-    } */
 }
