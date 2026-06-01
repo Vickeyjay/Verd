@@ -68,7 +68,18 @@
 
 .input-container input {
     border: none;
-    height: 43px;
+    height: 33px;
+    outline: none;
+    transition: border 0.5s ease,
+}
+
+.input-container input:focus {
+    border-bottom: 1px solid #D6F284;
+    background-color: transparent;
+}
+
+.input-container input.active {
+    background-color: transparent;
 }
 
 .input-container .cta-btn {

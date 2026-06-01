@@ -285,4 +285,17 @@
         top: 113% !important;
         transform: translate(-50%, -50%);
     }
+
+    /* .footer-input-container > input {
+        border: none;
+        height: 33px;
+        outline: none;
+        transition: border 0.5s ease;
+        background-color: red !important;
+    }
+
+    .footer-input-container > input:focus {
+        border-bottom: 1px solid #D6F284;
+        background-color: transparent;
+    } */
 }

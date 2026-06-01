@@ -11,7 +11,12 @@ function App() {
   const [activeSection, setActiveSection] = useState('home')
 
   useEffect(() => {
-    const sections = document.querySelectorAll('[id]')
+    const sections = [
+      document.getElementById('home'),
+      document.getElementById('why-verd'),
+      document.getElementById('features'),
+      document.getElementById('faqs'),
+    ].filter(Boolean)
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -22,7 +27,8 @@ function App() {
         })
       },
       {
-        threshold: 0.5,
+        rootMargin: '-45% 0px -45% 0px',
+        threshold: 0
       }
     )
 

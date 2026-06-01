@@ -54,10 +54,13 @@
     transition: background-color .3s ease-out;
 }
 
-.nav-link-container a:hover,
 .nav-link-container a.active {
     background-color: #07170E;
     color: #FFFFFFB2;
+}
+
+.nav-link-container a:hover {
+    background-color: #fff;
 }
 
 .cta-btn {
