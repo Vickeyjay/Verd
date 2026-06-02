@@ -19,7 +19,7 @@ app.post('/api/waitlist', async (req, res) => {
   }
 
   const { data, error } = await resend.emails.send({
-    from: 'Marv from Verd <onboarding@resend.dev>',
+    from: 'Marv from Verd <marv@verdfinance.com>',
     to: [email],
     subject: "You're on the Verd waitlist!",
     html: `

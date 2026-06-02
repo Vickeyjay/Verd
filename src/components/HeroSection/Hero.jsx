@@ -15,7 +15,7 @@ const Hero = () => {
     if (!email) return;
 
     try {
-      const res = await fetch('http://https://www.verdfinance.com//api/waitlist', {
+      const res = await fetch('https://www.verdfinance.com//api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
@@ -25,9 +25,11 @@ const Hero = () => {
       if (!res.ok) throw new Error(result.error);
 
       setEmail('');
-      showToast('success', <><strong>Congratulations!!! 🎉</strong><br/>You're on the list! Check your inbox.</>);
+          showToast('success', "Congratulations!!! \n You're on the list! Check your inbox. 🎉");
+
     } catch (err) {
-      showToast('error', <><strong>Uh oh!</strong><br/>Something went wrong. Try again.</>);
+            showToast('error', 'Uh oh! \n Something went wrong. Try again.');
+;
     }
   };
 
