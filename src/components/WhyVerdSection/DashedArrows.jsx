@@ -7,6 +7,7 @@ const DashedArrow = ({ height = 60, className=''}) => (
     height={height}
     viewBox={`0 0 10 ${height}`}
     xmlns="http://www.w3.org/2000/svg"
+    data-aos="fade-up" data-aos-delay="100"
     // style={{ display: 'block', margin: '0 auto' }}
   >
     <line

@@ -2,6 +2,8 @@
     padding: 32px;
     height: 100vh;
     background-color: #F9F9F9;
+    width: 100%;
+    overflow: hidden;
 }
 
 .hero-bg > .hero-container {
@@ -124,16 +126,23 @@
   color: #991b1b;
 }
 
+.toast {
+  white-space: pre-line; /* ← add this */
+  /* ...rest of your existing toast styles */
+}
+
 
 /* ---- Mobile Responsiveness ----- */
 
 @media (max-width: 768px) {
     .hero-bg {
-    padding: 16px;
-    height: 75vh;
-    background-color: #F9F9F9;
-    border-radius: 15px !important;
-    }
+        padding: 16px;
+        height: 75vh;
+        overflow: hidden;
+        background-color: #F9F9F9; 
+        border-radius: 15px !important;
+        
+        }
     .hero-bg > .hero-container {
         height: 95%;
         border-radius: 20px;

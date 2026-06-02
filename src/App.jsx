@@ -6,6 +6,8 @@ import WhyVerd from './components/WhyVerdSection/WhyVerd'
 import Features from './components/Features/Features'
 import Footer from './components/Footer/Footer'
 import Faq from './components/FAQ/faq'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home')
@@ -36,6 +38,14 @@ function App() {
 
     return () => observer.disconnect()
   }, [])
+
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
     <>

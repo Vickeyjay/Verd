@@ -284,8 +284,8 @@
     }
 
     .features-cards .card-img-three img{
-        width: 400px !important;
-        height: 307.24591064453125px !important;
+        width: 100% !important;
+        height: 100% !important;
         position: absolute;
         top: 30px;
         left: 0;

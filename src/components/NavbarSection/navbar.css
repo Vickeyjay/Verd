@@ -61,6 +61,7 @@
 
 .nav-link-container a:hover {
     background-color: #fff;
+    color: #07170E;
 }
 
 .cta-btn {
@@ -75,7 +76,7 @@
 
 .cta-btn:hover {
     background-color: #07170E !important;
-    color: #D6F284;
+    color: #D6F284 !important;
 }
 
 
