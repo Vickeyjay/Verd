@@ -15,7 +15,7 @@ const Hero = () => {
     if (!email) return;
 
     try {
-      const res = await fetch('http://localhost:3001/api/waitlist', {
+      const res = await fetch('http://https://www.verdfinance.com//api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
