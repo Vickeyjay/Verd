@@ -39,16 +39,16 @@ const Faq = () => {
 
 
   return (
-    <div data-aos="fade-up" data-aos-delay="100" className="faq-wrapper" id="faqs">
-      <div data-aos="fade-up" data-aos-delay="100" className="faq-text">
+    <div data-aos="fade-up" data-aos-delay="50" className="faq-wrapper" id="faqs">
+      <div data-aos="fade-up" data-aos-delay="50" className="faq-text">
         <h2 className="faq-title">Frequently Asked Questions</h2>
         <p>Everything you need to know about Verd.</p>
       </div>
       
-      <div data-aos="fade-up" data-aos-delay="100" className="faq-container">
+      <div data-aos="fade-up" data-aos-delay="50" className="faq-container">
         {faqData.map((item, index) => (
           <div key={index} className="faq-item">
-            <div data-aos="fade-up" data-aos-delay="100" className="faq-header" onClick={() => toggleFaq(index)}>
+            <div data-aos="fade-up" data-aos-delay="50" className="faq-header" onClick={() => toggleFaq(index)}>
               <p>{item.question}</p>
               <span
                 className={`faq-icon ${activeIndex === index ? "open" : ""}`}
@@ -86,7 +86,7 @@ const Faq = () => {
                 activeIndex === index ? "show" : ""
               }`}
             >
-              <div data-aos="fade-up" data-aos-delay="100" className="faq-body">
+              <div data-aos="fade-up" data-aos-delay="50" className="faq-body">
                 <p>{item.answer}</p>
               </div>
             </div>

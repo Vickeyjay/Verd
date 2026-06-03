@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/images/logo-img.png';
+import logo from '../../assets/images/logo-footer.png';
 import './navbar.css';
 
 const Navbar = ({ activeSection }) =>  {
@@ -38,7 +38,7 @@ const Navbar = ({ activeSection }) =>  {
 
                     <a
                         href="#home"
-                        className={`cta-btn`}
+                        className= "cta-btn"
                     >
                         Join Waitlist
                     </a>

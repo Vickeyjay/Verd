@@ -143,6 +143,10 @@
     font-size: 12px;
 }
 
+.explore-sub  a:hover {
+    color: #D6F284;
+}
+
 .footer-contents .socials-container {
     display: flex;
     flex-direction: column;
@@ -184,6 +188,10 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
+}
+
+.socials-links a:hover {
+    color: #D6F284;
 }
 
 .footer-container .copyright-container {

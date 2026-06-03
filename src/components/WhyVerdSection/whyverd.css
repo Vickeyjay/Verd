@@ -60,7 +60,7 @@
 }
 
 .why-cards-container .why-cards:hover {
-    transform: rotate(0deg);
+    transform: rotate(0deg) !important;
 }
 
 .why-cards-container .why-cards .icon-text-content {
@@ -74,20 +74,20 @@
     position: absolute;
     top: 0;
     left: 13%;
-    transform: rotate(-2.33deg);
+    transform: rotate(-2.33deg) !important;
 }
 
 .why-cards-container .card-2 {
     position: absolute;
     bottom: 40px;
-    transform: rotate(-5.55deg);
+    transform: rotate(-5.55deg) !important;
 }
 
 .why-cards-container .card-3 {
     position: absolute;
     top: 0;
     right: 13%;
-    transform: rotate(4.52deg);
+    transform: rotate(4.52deg) !important;
 }
 
 .why-cards .why-icon img{

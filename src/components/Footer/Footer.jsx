@@ -40,18 +40,18 @@ const Footer = () => {
 
   return (
     <>
-        <div data-aos="fade-up" data-aos-delay="100" className="footer-container">
-            <div data-aos="fade-up" data-aos-delay="100" className="footer-top-container">
-                <div data-aos="fade-up" data-aos-delay="100" className="footer-text-container">
-                <div data-aos="fade-up" data-aos-delay="100" className="footer-main-text">
+        <div data-aos="fade-up" data-aos-delay="50" className="footer-container">
+            <div data-aos="fade-up" data-aos-delay="50" className="footer-top-container">
+                <div data-aos="fade-up" data-aos-delay="50" className="footer-text-container">
+                <div data-aos="fade-up" data-aos-delay="50" className="footer-main-text">
                     <span>Join the Waitlist</span>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="100" className="footer-sub-text">
+                <div data-aos="fade-up" data-aos-delay="50" className="footer-sub-text">
                     <span>Be first to access a simpler way to grow your money with stable, on-chain savings.</span>
                 </div>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="100" className="footer-input-container">
+            <div data-aos="fade-up" data-aos-delay="50" className="footer-input-container">
                 <input
                   type="email"
                   placeholder='Enter email address'
@@ -66,35 +66,35 @@ const Footer = () => {
             </div>
             </div>
             
-            <div data-aos="fade-up" data-aos-delay="100" className="footer-contents">
-                <div data-aos="fade-up" data-aos-delay="100" className="logo-text-container">
-                    <div data-aos="fade-up" data-aos-delay="100" className="footer-logo-container">
+            <div data-aos="fade-up" data-aos-delay="50" className="footer-contents">
+                <div data-aos="fade-up" data-aos-delay="50" className="logo-text-container">
+                    <div data-aos="fade-up" data-aos-delay="50" className="footer-logo-container">
                         <a href="#home">
                             <img src={logo} alt="logo" />
                         </a>
                     </div>
 
-                    <div data-aos="fade-up" data-aos-delay="100" className="text-container">
+                    <div data-aos="fade-up" data-aos-delay="50" className="text-container">
                         <span>Verd is a DeFi-powered platform helping you save and grow your money with ease.</span>
                     </div>
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="100" className="explore-container">
-                    <div data-aos="fade-up" data-aos-delay="100" className="explore-main">
+                <div data-aos="fade-up" data-aos-delay="50" className="explore-container">
+                    <div data-aos="fade-up" data-aos-delay="50" className="explore-main">
                         <span>Explore</span>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="100" className="explore-sub">
+                    <div data-aos="fade-up" data-aos-delay="50" className="explore-sub">
                         <a href="#why-verd">Why Verd</a>
                         <a href="#features">Features</a>
                         <a href="#faqs">FAQs</a>
                     </div>
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="100" className="socials-container">
-                    <div data-aos="fade-up" data-aos-delay="100" className="socials-main">
+                <div data-aos="fade-up" data-aos-delay="50" className="socials-container">
+                    <div data-aos="fade-up" data-aos-delay="50" className="socials-main">
                         <span>Socials</span>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="100" className="socials-links">
+                    <div data-aos="fade-up" data-aos-delay="50" className="socials-links">
                         <span>
                             <a href="https://www.linkedin.com/company/verd-finance/"><img src={linkedin} alt="image" /> LinkedIn</a>    
                         </span>
@@ -114,7 +114,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="100" className="copyright-container">
+            <div data-aos="fade-up" data-aos-delay="50" className="copyright-container">
                 <span> &copy; 2026 VerdFinance. All rights reserved.</span>
             </div>
 

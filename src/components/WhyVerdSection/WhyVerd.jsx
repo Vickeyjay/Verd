@@ -10,18 +10,18 @@ import DashedArrow from './DashedArrows'
 
 const WhyVerd = () => {
   return (
-    <div data-aos="fade-up" data-aos-delay="100" className="why-container" id='why-verd'>
-            <div data-aos="fade-up" data-aos-delay="100" className="why-text-container">
-                <div data-aos="fade-up" data-aos-delay="100" className="why-main-text">
+    <div data-aos="fade-up" data-aos-delay="50" className="why-container" id='why-verd'>
+            <div data-aos="fade-up" data-aos-delay="50" className="why-text-container">
+                <div data-aos="fade-up" data-aos-delay="50" className="why-main-text">
                     <span>Why Verd Exists</span>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="100" className="why-sub-text">
+                <div data-aos="fade-up" data-aos-delay="50" className="why-sub-text">
                     <span>Your money should be doing more, Verd bridges traditional finance and DeFi, giving you a simple system to save, grow and access your money.</span>
                 </div>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="100" className="why-bentos">
-                <div data-aos="fade-up" data-aos-delay="100" className="why-cards-container">
+            <div data-aos="fade-up" data-aos-delay="50" className="why-bentos">
+                <div data-aos="fade-up" data-aos-delay="50" className="why-cards-container">
 
                     {/* DESKTOP SVG ARROWS - untouched */}
                     <svg className="arrows-svg" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
@@ -50,63 +50,63 @@ const WhyVerd = () => {
                         />
                     </svg>
 
-                    <div data-aos="fade-up" data-aos-delay="100" className="why-cards card-1">
-                        <div data-aos="fade-up" data-aos-delay="100" className="icon-text-content">
-                            <div data-aos="fade-up" data-aos-delay="100" className="why-icon">
+                    <div data-aos="fade-up" data-aos-delay="50" className="why-cards card-1">
+                        <div data-aos="fade-up" data-aos-delay="50" className="icon-text-content">
+                            <div data-aos="fade-up" data-aos-delay="50" className="why-icon">
                             <img src={download} alt="" />
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="100" className="why-card-texts">
-                            <div data-aos="fade-up" data-aos-delay="100" className="cards-main-text">
+                        <div data-aos="fade-up" data-aos-delay="50" className="why-card-texts">
+                            <div data-aos="fade-up" data-aos-delay="50" className="cards-main-text">
                                 <span>Deposit</span>
                             </div>
-                            <div data-aos="fade-up" data-aos-delay="100" className="cards-sub-text">
+                            <div data-aos="fade-up" data-aos-delay="50" className="cards-sub-text">
                                 <span>Deposit in fiat or crypto with ease</span>
                             </div>
                         </div>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="100" className="why-cards-img img-left">
+                        <div data-aos="fade-up" data-aos-delay="50" className="why-cards-img img-left">
                             <img src={currency} alt="" />
                         </div>
                     </div>
                     
                     <DashedArrow className="mobile-arrow" height={130}/>
 
-                    <div data-aos="fade-up" data-aos-delay="100" className="why-cards card-2">
-                        <div data-aos="fade-up" data-aos-delay="100" className="icon-text-content">
-                            <div data-aos="fade-up" data-aos-delay="100" className="why-icon">
+                    <div data-aos="fade-up" data-aos-delay="50" className="why-cards card-2">
+                        <div data-aos="fade-up" data-aos-delay="50" className="icon-text-content">
+                            <div data-aos="fade-up" data-aos-delay="50" className="why-icon">
                             <img src={grow} alt="" />
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="100" className="why-card-texts">
-                            <div data-aos="fade-up" data-aos-delay="100" className="cards-main-text">
+                        <div data-aos="fade-up" data-aos-delay="50" className="why-card-texts">
+                            <div data-aos="fade-up" data-aos-delay="50" className="cards-main-text">
                                 <span>Grow</span>
                             </div>
-                            <div data-aos="fade-up" data-aos-delay="100" className="cards-sub-text">
+                            <div data-aos="fade-up" data-aos-delay="50" className="cards-sub-text">
                                 <span>Structured DeFi systems for steady growth.</span>
                             </div>
                         </div>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="100" className="why-cards-img img-center">
+                        <div data-aos="fade-up" data-aos-delay="50" className="why-cards-img img-center">
                             <img src={chart} alt="" />
                         </div>
                     </div>
 
                     <DashedArrow className="mobile-arrow" height={130}/>
 
-                    <div data-aos="fade-up" data-aos-delay="100" className="why-cards card-3">
-                        <div data-aos="fade-up" data-aos-delay="100" className="icon-text-content">
-                            <div data-aos="fade-up" data-aos-delay="100" className="why-icon">
+                    <div data-aos="fade-up" data-aos-delay="50" className="why-cards card-3">
+                        <div data-aos="fade-up" data-aos-delay="50" className="icon-text-content">
+                            <div data-aos="fade-up" data-aos-delay="50" className="why-icon">
                             <img src={wallet} alt="" />
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="100" className="why-card-texts">
-                            <div data-aos="fade-up" data-aos-delay="100" className="cards-main-text">
+                        <div data-aos="fade-up" data-aos-delay="50" className="why-card-texts">
+                            <div data-aos="fade-up" data-aos-delay="50" className="cards-main-text">
                                 <span>Access</span>
                             </div>
-                            <div data-aos="fade-up" data-aos-delay="100" className="cards-sub-text">
+                            <div data-aos="fade-up" data-aos-delay="50" className="cards-sub-text">
                                 <span>Withdraw anytime, your way</span>
                             </div>
                         </div>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="100" className="why-cards-img img-right">
+                        <div data-aos="fade-up" data-aos-delay="50" className="why-cards-img img-right">
                             <img src={check} alt="" />
                         </div>
                     </div>

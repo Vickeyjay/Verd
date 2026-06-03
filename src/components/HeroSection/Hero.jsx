@@ -37,18 +37,18 @@ const Hero = () => {
     <>
       <div className="hero-bg" id='home'>
         <div className="hero-container">
-          <div data-aos="fade-up" data-aos-delay="100" className="coming-soon">
-            <img src={logo} alt="" /><span>Launching Soon</span>
+          <div data-aos="fade-up" data-aos-delay="50" className="coming-soon">
+            <span className="blink"></span><span>Launching Soon</span>
           </div>
-          <div data-aos="fade-up" data-aos-delay="100" className="hero-text">
-            <div data-aos="fade-up" data-aos-delay="100" className="large-text">
+          <div data-aos="fade-up" data-aos-delay="50" className="hero-text">
+            <div data-aos="fade-up" data-aos-delay="50" className="large-text">
               <span>Where Your Money Does More</span>
             </div>
-            <div data-aos="fade-up" data-aos-delay="100" className="small-text">
+            <div data-aos="fade-up" data-aos-delay="50" className="small-text">
               <span>A DeFi-powered system that helps your money grow and compound.</span>
             </div>
           </div>
-          <div data-aos="fade-up" data-aos-delay="100" className="input-container">
+          <div data-aos="fade-up" data-aos-delay="50" className="input-container">
             <input
               type="email"
               placeholder='Enter email address'
@@ -65,7 +65,7 @@ const Hero = () => {
       </div>
 
       {/* Toast Notification */}
-      <div data-aos="fade-up" data-aos-delay="100" className={`toast ${toast.type} ${toast.show ? 'show' : ''}`}>
+      <div data-aos="fade-up" data-aos-delay="50" className={`toast ${toast.type} ${toast.show ? 'show' : ''}`}>
         {toast.msg}
       </div>
     </>
