@@ -53,10 +53,90 @@ const Features = () => {
 
                 <div data-aos="fade-up" data-aos-delay="50" className="cards-align">
                     <div data-aos="fade-up" data-aos-delay="50" className="features-cards cards-three">
-                    <div data-aos="fade-up" data-aos-delay="50" className="features-card-img card-img-three">
+                    {/* <div data-aos="fade-up" data-aos-delay="50" className="features-card-img card-img-three">
                         <img src={graph} alt="image 0ne" />
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="50" className="features-text">
+                    </div> */}
+
+
+
+
+                    <div data-aos="fade-up" data-aos-delay="50" className="features-card-img card-img-three">
+
+                    {/* OLD GRAPH IMAGE */}
+                    {/*
+                    <img src={graph} alt="image one" />
+                    */}
+
+                    <svg
+                        className="graph"
+                        viewBox="0 0 400 250"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <defs>
+                            <linearGradient id="graphGradient" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stopColor="#C7EA66" stopOpacity="0.5" />
+                                <stop offset="70%" stopColor="#C7EA66" stopOpacity="0.15" />
+                                <stop offset="100%" stopColor="#C7EA66" stopOpacity="0" />
+                            </linearGradient>
+                        </defs>
+
+                        {/* Filled Area */}
+                        <path
+                            className="graph-fill"
+                            fill="url(#graphGradient)"
+                            d="
+                                M0 250
+                                L0 200
+                                L50 150
+                                L100 150
+                                L150 100
+                                L200 100
+                                L250 50
+                                L300 50
+                                L350 10
+                                L400 10
+                                L400 250
+                                Z
+                            "
+                        />
+
+                        {/* Line */}
+                        <path
+                            className="graph-line"
+                            fill="none"
+                            strokeWidth="2"
+                            d="
+                                M0 200
+                                L50 150
+                                L100 150
+                                L150 100
+                                L200 100
+                                L250 50
+                                L300 50
+                                L350 10
+                                L400 10
+                            "
+                        />
+
+                        {/* Dot */}
+                        <circle
+                            className="graph-dot"
+                            cx="400"
+                            cy="10"
+                            r="5"
+                            fill="#fff"
+                            stroke="#C7EA66"
+                            strokeWidth="2"
+                        />
+                    </svg>
+
+                </div>
+
+
+
+
+
+                    <div data-aos="fade-up" data-aos-delay="50" className="features-text main-three">
                         <div data-aos="fade-up" data-aos-delay="50" className="card-main-txt">
                         <span>Grow Passively</span>
                     </div>

@@ -55,7 +55,7 @@
 }
 
 .cards-align .cards-one {
-    width: 40%;
+    width: 45%;
     background-color: #FFFFFF;
 }
 
@@ -68,10 +68,11 @@
     width: 60%;
     background-color: #FFFFFF;
     position: relative;
+    padding-left: 0px;
 }
 
 .cards-align .cards-four {
-    width: 40%;
+    width: 45%;
     background-color: #FFFFFF;
 }
 
@@ -98,13 +99,13 @@
     justify-content: left;
 }
 
-.features-cards .card-img-three img{
-   width: 506px !important;
+/* .features-cards .card-img-three img{
+   width: 656px !important;
    height: 307.24591064453125px !important;
     position: absolute;
-    top: 10px;
-    left: 0;
-}
+    top: -10px;
+    left: -32px;
+} */
 
 .features-cards .card-img-four img{
    width: 268.7674560546875px !important;
@@ -140,6 +141,10 @@
 
 .features-text .txt-two {
     width: 452px;
+}
+
+.main-three {
+    margin-left: 30px;
 }
 
 .features-text .txt-three {
@@ -218,6 +223,85 @@
         transform: scale(1);
     }
 }
+
+
+
+/* ==========================
+   CARD THREE GRAPH ANIMATION
+========================== */
+
+.card-img-three {
+  position: relative;
+  overflow: hidden;
+  height: 250px !important;
+  width: 100%;
+}
+
+.card-img-three .graph {
+    position: absolute;
+    top: -5px;
+    left: -110px;
+    height: 350px;
+    width: 100%;
+}
+
+.graph-fill {
+  transform-origin: center bottom;
+  transform-box: fill-box;
+  animation: fillUp 3s ease-in-out infinite;
+}
+
+.graph-line {
+  stroke: #C7EA66;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+
+  animation: drawLine 3s ease-in-out infinite;
+}
+
+@keyframes fillUp {
+  0% {
+    transform: scaleY(0);
+  }
+
+  40%,
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes drawLine {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  40%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pulseDot {
+  0%,
+  35% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 
 
 /* MObile Responsiveness */
@@ -326,6 +410,25 @@
     .features-text .txt-four {
         width: 218px !important;
     }
+
+.card-img-three {
+    position: relative;
+    overflow: hidden;
+    height: 220px !important;
+    width: 100%;
+}
+
+.card-img-three .graph {
+    position: absolute;
+    top: 0;
+    left: -7px;
+
+    width: 100% !important;
+    height: 100%;
+
+    display: block;
+}
+
 }
 
 
