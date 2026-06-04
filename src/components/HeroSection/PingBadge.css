@@ -1,0 +1,76 @@
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* Badge pill */
+.ping-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+/* Green variant (default — matches Verd brand) */
+.ping-badge--green {
+  /* border: 1px solid rgba(163, 230, 53, 0.3); */
+  /* background: rgba(20, 40, 20, 0.6); */
+  color: #FFFFFF;
+}
+.ping-badge--green .ping-ring {
+  background-color: #a3e635;
+}
+.ping-badge--green .ping-core {
+  background-color: #a3e635;
+}
+
+/* Blue variant */
+.ping-badge--blue {
+  border: 1px solid rgba(99, 179, 237, 0.3);
+  background: rgba(10, 20, 40, 0.6);
+  color: #a0cff8;
+}
+.ping-badge--blue .ping-ring {
+  background-color: #63b3ed;
+}
+.ping-badge--blue .ping-core {
+  background-color: #63b3ed;
+}
+
+/* Dot container */
+.ping-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+}
+
+/* Pulsing outer ring */
+.ping-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: ping var(--ping-duration, 1s) cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Solid inner dot */
+.ping-core {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
