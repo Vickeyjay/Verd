@@ -18,28 +18,127 @@ export default async function handler(req, res) {
     to: [email],
     subject: "You're on the Verd waitlist!",
     html: `
-    <div style="font-family: sans-serif; max-width: 500px; margin: 0 auto; padding: 40px 20px; background-color: #ffffff;">
-      <h1 style="color: #4F46E5; font-size: 28px; margin-bottom: 8px;">Verd</h1>
-      <h2 style="font-size: 22px; color: #111827; margin-bottom: 12px;">You're on the list!</h2>
-      <p style="font-size: 16px; color: #6B7280; line-height: 1.6;">
-        Hey there, thanks for joining the <strong>Verd</strong> waitlist. 
-        We're building something special — a DeFi-powered system that helps 
-        your money grow and compound.
-      </p>
-      <p style="font-size: 16px; color: #6B7280; line-height: 1.6;">
-        We'll reach out as soon as we're ready to launch. Stay tuned.
-      </p>
-      <a href="https://verdfinance.com" 
-         style="display: inline-block; margin-top: 24px; padding: 12px 24px; 
-                background-color: #4F46E5; color: #ffffff; text-decoration: none; 
-                border-radius: 8px; font-size: 16px;">
-        Visit Verd
-      </a>
-      <p style="margin-top: 40px; font-size: 13px; color: #9CA3AF;">
-        You're receiving this because you signed up at verdfinance.com. <br/>
-        © 2025 Verd. All rights reserved.
-      </p>
-    </div>
+        <div style="margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;">
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="padding:30px 0;">
+        <tr>
+            <td align="center">
+
+                <!-- Main Container -->
+                <table width="600" cellpadding="0" cellspacing="0" border="0"
+                    style="border-radius:12px;overflow:hidden;background-color:#f5f5f5;">
+
+                    <!-- Hero Image -->
+                    <tr>
+                        <td>
+                            <img
+                                src="./verd-mail.png"
+                                alt="Verd"
+                                width="600"
+                                style="display:block;width:100%;max-width:600px;border:0;">
+                        </td>
+                    </tr>
+
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding:40px 40px 20px 40px;color:#4b4b4b;font-size:18px;line-height:1.9;">
+
+                            <p style="margin:0 0 25px 0;">
+                                Hi there,
+                                <br>
+                                Welcome to Verd.
+                            </p>
+
+                            <p style="margin:0 0 25px 0;">
+                                We're building a simpler way to save and grow your money through stable digital assets, without the complexity that often comes with crypto.
+                            </p>
+
+                            <p style="margin:0 0 25px 0;">
+                                You've successfully joined the waitlist and we'll keep you updated as we get closer to launch.
+                            </p>
+
+                            <p style="margin:0 0 25px 0;">
+                                In the meantime, follow us on our social platforms to stay up to date with our progress and be the first to hear about new updates.
+                            </p>
+
+                            <p style="margin:0;">
+                                Thanks for being early.
+                                <br>
+                                The Verd Team 💚
+                            </p>
+
+                        </td>
+                    </tr>
+
+                    <!-- Social Icons -->
+                    <tr>
+                        <td align="center" style="padding:25px 20px 15px 20px;">
+
+                            <a href="https://linkedin.com" style="text-decoration:none;margin:0 8px;">
+                                <img src="./linkedin-mail.png"
+                                    alt="LinkedIn"
+                                    width="28"
+                                    style="display:inline-block;border:0;">
+                            </a>
+
+                            <a href="https://x.com" style="text-decoration:none;margin:0 8px;">
+                                <img src="./x-mail.png"
+                                    alt="X"
+                                    width="28"
+                                    style="display:inline-block;border:0;">
+                            </a>
+
+                            <a href="https://instagram.com" style="text-decoration:none;margin:0 8px;">
+                                <img src="./insta-mail.png"
+                                    alt="Instagram"
+                                    width="28"
+                                    style="display:inline-block;border:0;">
+                            </a>
+
+                            <a href="https://facebook.com" style="text-decoration:none;margin:0 8px;">
+                                <img src="./facebook-mail.png"
+                                    alt="Facebook"
+                                    width="28"
+                                    style="display:inline-block;border:0;">
+                            </a>
+
+                        </td>
+                    </tr>
+
+                    <!-- Footer -->
+                    <tr>
+                        <td align="center"
+                            style="padding:0 40px 35px 40px;
+                                   color:#7a7a7a;
+                                   font-size:12px;
+                                   line-height:1.8;">
+
+                            <p style="margin:0;">
+                                You're receiving this email because you signed up for our waitlist.
+                            </p>
+
+                            <p style="margin:0;">
+                                If you no longer wish to receive these emails,
+                                <a href="#"
+                                    style="color:#28a745;text-decoration:none;">
+                                    please unsubscribe here
+                                </a>
+                            </p>
+
+                            <p style="margin-top:8px;">
+                                Copyright © 2026 Verd. All rights reserved.
+                            </p>
+
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</div>
     `,
   });
 
