@@ -81,7 +81,7 @@ export default async function handler(req, res) {
                                     style="display:inline-block;border:0;">
                             </a>
 
-                            <a href="https://x.com/verdfinanc" style="text-decoration:none;margin:0 8px;">
+                            <a href="https://x.com/verdfinance" style="text-decoration:none;margin:0 8px;">
                                 <img src="https://verdfinance.com/x-mail.png"
                                     alt="X"
                                     width="28"
