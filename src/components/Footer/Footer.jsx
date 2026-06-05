@@ -5,12 +5,13 @@ import x from '../../assets/images/x.png';
 import insta from '../../assets/images/insta.png';
 import facebook from '../../assets/images/facebook.png';
 import footer from '../../assets/images/footer.png';
+import useEmailInput from '../../hooks/useEmailInput';
 
 import './footer.css';
 import '../HeroSection/hero.css'
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
+  const email = useEmailInput(); // 👈 replaces: const [email, setEmail] = useState('');
   const [toast, setToast] = useState({ show: false, type: '', msg: '' });
 
   const showToast = (type, msg) => {
@@ -19,19 +20,19 @@ const Footer = () => {
   };
 
   const handleJoinWaitlist = async () => {
-    if (!email) return;
+    if (!email.validate()) return;
 
     try {
       const res = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email: email.value }),
       });
 
       const result = await res.json();
       if (!res.ok) throw new Error(result.error);
 
-      setEmail('');
+      email.reset();
       showToast('success', <><strong>Congratulations!!! </strong><br/>You're on the list! Check your inbox.</>);
     } catch (err) {
       showToast('error', <><strong>Uh oh!</strong><br/>Something went wrong. Try again.</>);
@@ -53,10 +54,12 @@ const Footer = () => {
 
             <div data-aos="fade-up" data-aos-delay="50" className="footer-input-container">
                 <input
-                  type="email"
-                  placeholder='Enter email address'
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                    type="email"
+                    placeholder='Enter email address'
+                    value={email.value}           //  was: value={email}
+                    onChange={email.handleChange} //  was: onChange={(e) => setEmail(e.target.value)}
+                    onBlur={email.handleBlur}     //  new: shows error when user leaves the field
+                    className={email.error ? 'input-error' : ''}  // new: red border on error
                 />
                 <span>
                   <button className="foot-cta-btn" onClick={handleJoinWaitlist}>
@@ -64,6 +67,9 @@ const Footer = () => {
                   </button>
                 </span>
             </div>
+            {email.error && (              // 👈 new: error message below the input
+              <p className="email-error">{email.error}</p>
+            )}
             </div>
             
             <div data-aos="fade-up" data-aos-delay="50" className="footer-contents">
