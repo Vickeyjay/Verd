@@ -7,10 +7,8 @@
 }
 
 .hero-bg > .hero-container {
-    background: url(../../assets/images/hero.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 65%;
+    /* PNG fallback for older browsers */
+    background: url(../../assets/images/hero.png) no-repeat 50% 65% / cover;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -19,6 +17,26 @@
     height: 100%;
     gap: 28px;
     border-radius: 30px;
+    animation: heroFadeIn 0.7s ease forwards;
+}
+
+/* WebP override — modern browsers only, saves 25–35% file size */
+@supports (background-image: url("data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JZACdAEO/gHOAAAA")) {
+    .hero-bg > .hero-container {
+        background-image: url(../../assets/images/hero.webp);
+    }
+}
+
+/* Smooth fade-in so loading feels intentional, not broken */
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.015);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .hero-container > .coming-soon {
@@ -41,13 +59,10 @@
 
 .blink {
   position: relative;
-
   width: 5px;
   height: 5px;
-
   border-radius: 50%;
   background: #b8ff4f;
-
   flex-shrink: 0;
 }
 
@@ -55,10 +70,8 @@
   content: "";
   position: absolute;
   inset: 0;
-
   border-radius: 50%;
   background: #b8ff4f;
-
   animation: pulse .7s infinite;
 }
 
@@ -67,12 +80,10 @@
     transform: scale(1);
     opacity: .5;
   }
-
   70% {
     transform: scale(1.5);
     opacity: 0;
   }
-
   100% {
     transform: scale(1.3);
     opacity: 0;
@@ -174,7 +185,6 @@
 
 .input-error {
   background-color: #fca5a5;
-
 }
 
 .email-error {
@@ -194,8 +204,7 @@
         overflow: hidden;
         background-color: #F9F9F9; 
         border-radius: 15px !important;
-        
-        }
+    }
     .hero-bg > .hero-container {
         height: 95%;
         border-radius: 20px;
@@ -205,22 +214,20 @@
     .hero-container .hero-text {
         text-align: center;
         gap: 6px;
-
     }
 
     .hero-text > .large-text {
-    font-size: 38px;
-    line-height: 36.93px;
-    width: 316px !important;
-    font-family: 'Questrial', sans-serif !important;
-    letter-spacing: -3%;
-
+        font-size: 38px;
+        line-height: 36.93px;
+        width: 316px !important;
+        font-family: 'Questrial', sans-serif !important;
+        letter-spacing: -3%;
     }
 
     .hero-text > .small-text {
-    font-size: 14px;
-    width: 266px;
-    line-height: 19px;
+        font-size: 14px;
+        width: 266px;
+        line-height: 19px;
     }
 
     .hero-container > .coming-soon {
@@ -232,8 +239,8 @@
     }
 
     .hero-container > .coming-soon blink {
-    width: 18px;
-    height: 18px;
+        width: 18px;
+        height: 18px;
     }
     .coming-soon span {
         font-size: 12px;

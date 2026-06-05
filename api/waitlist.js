@@ -92,6 +92,7 @@ export default async function handler(req, res) {
                                 <img src="https://verdfinance.com/insta-mail.png"
                                     alt="Instagram"
                                     width="28"
+                                    height="30"
                                     style="display:inline-block;border:0;">
                             </a>
 
