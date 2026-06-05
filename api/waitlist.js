@@ -32,7 +32,7 @@ export default async function handler(req, res) {
                     <tr>
                         <td>
                             <img
-                                src="./verd-mail.png"
+                                src="https://verdfinance.com/verd-mail.png"
                                 alt="Verd"
                                 width="600"
                                 style="display:block;width:100%;max-width:600px;border:0;">
@@ -74,29 +74,29 @@ export default async function handler(req, res) {
                     <tr>
                         <td align="center" style="padding:25px 20px 15px 20px;">
 
-                            <a href="https://linkedin.com" style="text-decoration:none;margin:0 8px;">
-                                <img src="./linkedin-mail.png"
+                            <a href="https://www.linkedin.com/company/verd-finance/" style="text-decoration:none;margin:0 8px;">
+                                <img src="https://verdfinance.com/linkedin-mail.png"
                                     alt="LinkedIn"
                                     width="28"
                                     style="display:inline-block;border:0;">
                             </a>
 
-                            <a href="https://x.com" style="text-decoration:none;margin:0 8px;">
-                                <img src="./x-mail.png"
+                            <a href="https://x.com/verdfinanc" style="text-decoration:none;margin:0 8px;">
+                                <img src="https://verdfinance.com/x-mail.png"
                                     alt="X"
                                     width="28"
                                     style="display:inline-block;border:0;">
                             </a>
 
-                            <a href="https://instagram.com" style="text-decoration:none;margin:0 8px;">
-                                <img src="./insta-mail.png"
+                            <a href="https://www.instagram.com/verdfinance?igsh=NmUzMDExZ2xzdHR4" style="text-decoration:none;margin:0 8px;">
+                                <img src="https://verdfinance.com/insta-mail.png"
                                     alt="Instagram"
                                     width="28"
                                     style="display:inline-block;border:0;">
                             </a>
 
-                            <a href="https://facebook.com" style="text-decoration:none;margin:0 8px;">
-                                <img src="./facebook-mail.png"
+                            <a href="https://www.facebook.com/share/1Gfsy99SZP/" style="text-decoration:none;margin:0 8px;">
+                                <img src="https://verdfinance.com/facebook-mail.png"
                                     alt="Facebook"
                                     width="28"
                                     style="display:inline-block;border:0;">

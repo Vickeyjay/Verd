@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './hero.css';
 import logo from '../../assets/images/logo.png';
 import PingBadge from './PingBadge';
-import useEmailInput from '../../hooks/useEmailInput'; // 👈 add this import
+import useEmailInput from '../../Hooks/useEmailInput'; // 👈 add this import
 
 const Hero = () => {
   const email = useEmailInput(); // 👈 replaces: const [email, setEmail] = useState('');
