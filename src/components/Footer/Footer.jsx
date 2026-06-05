@@ -5,7 +5,7 @@ import x from '../../assets/images/x.png';
 import insta from '../../assets/images/insta.png';
 import facebook from '../../assets/images/facebook.png';
 import footer from '../../assets/images/footer.png';
-import useEmailInput from '../../Hooks/useEmailInput';
+import useEmailInput from '../../hooks/useEmailInput';
 
 import './footer.css';
 import '../HeroSection/hero.css'
