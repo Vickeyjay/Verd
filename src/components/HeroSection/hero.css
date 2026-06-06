@@ -121,8 +121,13 @@
 
 .hero-container .input-container {
     background-color: #fff;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
     padding: 9px 10px 9px 20px;
     border-radius: 72px;
+    width: max-content;
 }
 
 .input-container input {
@@ -248,11 +253,13 @@
 
     .input-container .cta-btn {
         font-size: 11.67px;
+        min-width: auto;
     }
 
     .input-container input {
-        height: 31.498733520507812px;
-        margin-left: 10px;
+        height: 33.498733520507812px;
+        /* margin-left: 10px; */
+        min-width: 0;
     }
 
     .hero-container .input-container {
