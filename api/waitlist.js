@@ -15,13 +15,17 @@ export default async function handler(req, res) {
   if (!email) return res.status(400).json({ error: 'Email is required' });
 
   // 1. Check if email already exists in Resend Audience
-  const { data: contacts, error: listError } = await resend.contacts.list({
-    audienceId: '5e4d5e4d-5e4d-5e4d-5e4d-5e4d5e4d5e4d',
+  const contactsRes = await fetch(`https://api.resend.com/audiences/${AUDIENCE_ID}/contacts`, {
+    headers: {
+      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+    },
   });
 
-  if (listError) return res.status(400).json({ error: 'Could not verify email.' });
+  const contactsData = await contactsRes.json();
 
-  const alreadySubscribed = contacts?.data?.some(
+  if (!contactsRes.ok) return res.status(400).json({ error: 'Could not verify email.' });
+
+  const alreadySubscribed = contactsData?.data?.some(
     (contact) => contact.email.toLowerCase() === email.toLowerCase()
   );
 
@@ -30,10 +34,13 @@ export default async function handler(req, res) {
   }
 
   // 2. Add contact to Resend Audience
-  await resend.contacts.create({
-    audienceId: '5e4d5e4d-5e4d-5e4d-5e4d-5e4d5e4d5e4d',
-    email,
-    unsubscribed: false,
+  await fetch(`https://api.resend.com/audiences/${AUDIENCE_ID}/contacts`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ email, unsubscribed: false }),
   });
 
   // 3. Send confirmation email
