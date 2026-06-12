@@ -23,6 +23,13 @@ const Hero = () => {
       });
 
       const result = await res.json();
+
+            if (res.status === 409) {
+        // Already subscribed
+        showToast('error', <><strong>Already subscribed!</strong><br />This email is already on the waitlist.</>);
+        return;
+      }
+
       if (!res.ok) throw new Error(result.error);
 
       email.reset(); // 👈 replaces: setEmail('');
