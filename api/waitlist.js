@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   if (!email) return res.status(400).json({ error: 'Email is required' });
 
   // 1. Check if email already exists in Resend Audience
-  const contactsRes = await fetch(`https://api.resend.com/audiences/${AUDIENCE_ID}/contacts`, {
+  const contactsRes = await fetch(`https://api.resend.com/audiences/${RESEND_AUDIENCE_ID}/contacts`, {
     headers: {
       Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
     },
@@ -34,7 +34,7 @@ export default async function handler(req, res) {
   }
 
   // 2. Add contact to Resend Audience
-  await fetch(`https://api.resend.com/audiences/${AUDIENCE_ID}/contacts`, {
+  await fetch(`https://api.resend.com/audiences/${RESEND_AUDIENCE_ID}/contacts`, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
