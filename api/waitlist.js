@@ -16,7 +16,7 @@ export default async function handler(req, res) {
 
   // 1. Check if email already exists in Resend Audience
   const { data: contacts, error: listError } = await resend.contacts.list({
-    audienceId: AUDIENCE_ID,
+    audienceId: '5e4d5e4d-5e4d-5e4d-5e4d-5e4d5e4d5e4d',
   });
 
   if (listError) return res.status(400).json({ error: 'Could not verify email.' });
@@ -31,7 +31,7 @@ export default async function handler(req, res) {
 
   // 2. Add contact to Resend Audience
   await resend.contacts.create({
-    audienceId: AUDIENCE_ID,
+    audienceId: '5e4d5e4d-5e4d-5e4d-5e4d-5e4d5e4d5e4d',
     email,
     unsubscribed: false,
   });

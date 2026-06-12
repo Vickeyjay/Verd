@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './hero.css';
 import PingBadge from './PingBadge';
-import useEmailInput from '../../hooks/useEmailInput'; // 👈 add this import
+import useEmailInput from '../../hooks/useEmailInput';
 
 const Hero = () => {
-  const email = useEmailInput(); // 👈 replaces: const [email, setEmail] = useState('');
+  const email = useEmailInput();
   const [toast, setToast] = useState({ show: false, type: '', msg: '' });
 
   const showToast = (type, msg) => {
@@ -13,18 +13,18 @@ const Hero = () => {
   };
 
   const handleJoinWaitlist = async () => {
-    if (!email.validate()) return; // 👈 replaces: if (!email) return;
+    if (!email.validate()) return;
 
     try {
       const res = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email.value }), // 👈 was: { email }
+        body: JSON.stringify({ email: email.value }),
       });
 
       const result = await res.json();
 
-            if (res.status === 409) {
+      if (res.status === 409) {
         // Already subscribed
         showToast('error', <><strong>Already subscribed!</strong><br />This email is already on the waitlist.</>);
         return;
@@ -32,8 +32,8 @@ const Hero = () => {
 
       if (!res.ok) throw new Error(result.error);
 
-      email.reset(); // 👈 replaces: setEmail('');
-      showToast('success', <><strong>Congratulations!!! </strong><br />You're on the list! Check your inbox.</>);
+      email.reset();
+      showToast('success', <><strong>Congratulations!!!</strong><br />You're on the list! Check your inbox.</>);
     } catch (err) {
       showToast('error', <><strong>Uh oh!</strong><br />Something went wrong. Try again.</>);
     }
@@ -58,22 +58,20 @@ const Hero = () => {
             <input
               type="email"
               placeholder='Enter email address'
-              value={email.value}           //  was: value={email}
-              onChange={email.handleChange} //  was: onChange={(e) => setEmail(e.target.value)}
-              onBlur={email.handleBlur}     //  new: shows error when user leaves the field
-              className={email.error ? 'input-error' : ''}  // new: red border on error
+              value={email.value}
+              onChange={email.handleChange}
+              onBlur={email.handleBlur}
+              className={email.error ? 'input-error' : ''}
             />
-            
             <span>
               <button className="cta-btn" onClick={handleJoinWaitlist}>
                 Get Early Access
               </button>
             </span>
           </div>
-
-          {email.error && (              // 👈 new: error message below the input
-              <p className="email-error">{email.error}</p>
-            )}
+          {email.error && (
+            <p className="email-error">{email.error}</p>
+          )}
         </div>
       </div>
 
