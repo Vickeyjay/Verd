@@ -24,6 +24,7 @@ dist-ssr
 *.sw?
 
 
-# .env file
-RESEND_API_KEY=re_Fmf5S9s8_DrcbASp4g6L7A41XQ1ZjuYZQ
-RESEND_API_KEY=re_7wwddCMJ_QVaMRw1Nb256baf1efEiMJS2
+# Environment variables
+.env
+.env.local
+.env.*.local

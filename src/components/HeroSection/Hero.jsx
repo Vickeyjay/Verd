@@ -22,7 +22,7 @@ const Hero = () => {
         body: JSON.stringify({ email: email.value }), // 👈 was: { email }
       });
 
-      const result = await res.json();z
+      const result = await res.json();
       if (!res.ok) throw new Error(result.error);
 
       email.reset(); // 👈 replaces: setEmail('');
